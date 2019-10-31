@@ -1,1 +1,15 @@
-<p>todo-item works!</p>
+
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ todoitem.taskDescription }}</h5>
+
+      <a class="btn btn-danger" (click)='setDueDate("urgent")'>urgent</a> 
+      &nbsp;
+      <a class="btn btn-success" (click)='setDueDate("days")'>days</a> 
+      &nbsp;
+      <a class="btn btn-success" (click)='setDueDate("week")'>week</a> 
+      &nbsp;
+      <a class="btn btn-warning" (click)='DeleteItem("todoitem.taskDiscription")'>Delete</a>
+    
+    </div>
+  </div>

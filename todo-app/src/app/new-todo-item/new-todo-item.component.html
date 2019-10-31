@@ -1,1 +1,7 @@
-<p>new-todo-item works!</p>
+<input id="myTask" name="myTask" type="text" placeholder="Enter Task" required #newDis>
+<input id="myDuedate" name="myDuedate" tpye="text" placeholder="Enter Due Date" required #newDate>
+
+<button class="btn btn-primary" (click)="saveTask(newDis, newDate)" >
+    Add Task
+</button>
+

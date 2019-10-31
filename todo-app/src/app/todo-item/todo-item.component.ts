@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { TodoServiceService} from '../todo-service.service';
+import { TodoItem } from '../app.model';
+
+
 
 @Component({
   selector: 'app-todo-item',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() todoitem: TodoItem;
+
+  constructor(private todoservice: TodoServiceService) { 
+    this.todoservice = todoservice;
+  
+  }
 
   ngOnInit() {
   }
+
+  setDueDate(todoDis:string,dates:string){
+    this.todoservice.updateTask(todoDis, dates);
+  }
+
+  DeleteItem(todoDIs:string){
+    this.todoservice.deleteTask(todoDIs);
+  }
+
 
 }

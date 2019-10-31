@@ -1,2 +1,14 @@
 
+
+
+<app-new-todo-item></app-new-todo-item>
+
+
+<div class="ui grid posts">
+    <app-todo-item *ngFor="let todoitem of getItems()" [todoitem]="todoitem"></app-todo-item>
+</div>
+
+
 <router-outlet></router-outlet>
+
+
