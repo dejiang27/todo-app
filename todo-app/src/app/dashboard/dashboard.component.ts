@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoItem} from '../app.model';
+import {TodoServiceService} from '../todo-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  items: TodoItem[];
 
-  ngOnInit() {
+
+  constructor(private todoservice:TodoServiceService){
+    this.items = todoservice.todolist;
   }
 
+  getItems():TodoItem[]{
+    return this.todoservice.todolist;
+  }
+  ngOnInit(){}
 }

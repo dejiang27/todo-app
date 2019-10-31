@@ -19,14 +19,15 @@ export class TodoServiceService {
   }
 
   updateTask(olddis:string,newDates:string){
+    var old;
     for (var y = 0; y < this.todolist.length; y++){
       if(this.todolist[y].taskDescription == olddis){
+        //For testing
+        old = this.todolist[y].dueDate;
         this.todolist[y].dueDate = newDates;
       }
     }
-    console.log(olddis, newDates);
-
-
+    console.log("Update the "+olddis+" from "+ old +" to "+ newDates);
   }
 
   deleteTask(olddis: string){
