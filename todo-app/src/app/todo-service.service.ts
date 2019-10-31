@@ -24,6 +24,8 @@ export class TodoServiceService {
         this.todolist[y].dueDate = newDates;
       }
     }
+    console.log(olddis, newDates);
+
 
   }
 
@@ -36,7 +38,4 @@ export class TodoServiceService {
     }
     this.todolist.splice(x,1);
   }
-
-
-
 }

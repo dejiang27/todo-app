@@ -3,13 +3,19 @@
     <div class="card-body">
       <h5 class="card-title">{{ todoitem.taskDescription }}</h5>
 
-      <a class="btn btn-danger" (click)='setDueDate("urgent")'>urgent</a> 
+      <a class="btn" [class.btn-success]="todoitem.dueDate != 'urgent'" [class.btn-danger]="todoitem.dueDate =='urgent'" (click)='setDueDate(todoitem.taskDescription,"urgent")'>urgent</a> 
+
       &nbsp;
-      <a class="btn btn-success" (click)='setDueDate("days")'>days</a> 
+
+      <a class="btn" [class.btn-success]="todoitem.dueDate != 'days'" [class.btn-danger]="todoitem.dueDate =='days'" (click)='setDueDate(todoitem.taskDescription,"days")'>days</a> 
+
       &nbsp;
-      <a class="btn btn-success" (click)='setDueDate("week")'>week</a> 
+
+      <a class="btn" [class.btn-success]="todoitem.dueDate != 'week'" [class.btn-danger]='todoitem.dueDate =="week"' (click)='setDueDate(todoitem.taskDescription,"week")'>week</a> 
+
       &nbsp;
-      <a class="btn btn-warning" (click)='DeleteItem("todoitem.taskDiscription")'>Delete</a>
+
+      <a class="btn btn-warning" (click)="DeleteItem(todoitem.taskDescription)">Delete</a>
     
     </div>
   </div>

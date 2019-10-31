@@ -20,8 +20,11 @@ export class NewTodoItemComponent implements OnInit {
 
   saveTask(taskDescription:HTMLInputElement, dueDate: HTMLInputElement):boolean{
     this.todoservice.addTask(new TodoItem(taskDescription.value, dueDate.value));
+    console.log("Added a new todo item:" +taskDescription.value +", " + dueDate.value);
+
     taskDescription.value = '';
     dueDate.value='';
+
     return false;
   }
 

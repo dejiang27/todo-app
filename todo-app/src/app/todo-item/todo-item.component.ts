@@ -27,6 +27,9 @@ export class TodoItemComponent implements OnInit {
 
   DeleteItem(todoDIs:string){
     this.todoservice.deleteTask(todoDIs);
+    console.log("Deleted:" +todoDIs);
+
+
   }
 
 
