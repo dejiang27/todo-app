@@ -1,8 +1,5 @@
 # todo-app
 
-
-Dejiang Chen
-
 GitHub url: https://github.com/dejiang27/todo-app
 
 I did the extra points for the both question 1 and question 2. 
